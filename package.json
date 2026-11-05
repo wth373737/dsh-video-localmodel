@@ -1,0 +1,47 @@
+{
+  "name": "dsh-video-localmodel",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first video screening for DeepSeek Harness: deterministic media signals, local Qwen3-ASR subtitles, local VLM frame captions and a text-model timeline, with the raw candidate frames handed back to the cloud model.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib/*.js",
+    "assets/*.py",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "locale/*.json",
+    "icon.svg",
+    "test"
+  ],
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "video",
+    "asr",
+    "ollama",
+    "local-model",
+    "timeline"
+  ],
+  "author": "wth373737",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wth373737/dsh-video-localmodel.git"
+  }
+}

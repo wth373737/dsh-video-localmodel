@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Local video screening">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f6feb"/>
+      <stop offset="1" stop-color="#0b2b52"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bg)"/>
+  <g fill="none" stroke="#e8f1ff" stroke-width="2.4" stroke-linecap="round">
+    <rect x="12" y="18" width="40" height="26" rx="5"/>
+    <path d="M12 26h40M12 36h40"/>
+    <path d="M20 12v6M44 12v6M20 44v6M44 44v6"/>
+  </g>
+  <path d="M27 27.5 38 31l-11 3.5z" fill="#8fd3ff"/>
+  <g stroke="#7fe0a8" stroke-width="2.2" stroke-linecap="round">
+    <path d="M20 48h2.5M26 45.5v5M31 47v2M36 44.5v7M41 47v2M45 45.5v5"/>
+  </g>
+</svg>

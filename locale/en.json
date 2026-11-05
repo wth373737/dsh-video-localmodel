@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Local Video Screening",
+    "description": "Turns a long video into timecoded subtitles, a timeline, an outline and candidate key frames using deterministic media signals, local Qwen3-ASR and local vision/text models. Models are reported and confirmed before any heavy work."
+  },
+  "tools": {
+    "plan": "Probe the environment and models, report what this run will use and how long it should take",
+    "scan": "Extract audio, run local ASR, detect scene cuts and sample coarse frames",
+    "caption": "Caption the coarse frames with the local vision model and score their importance",
+    "timeline": "Fold the transcript into a timeline, chapters and an outline, then pick key frames",
+    "export": "Write the SRT, the timeline Markdown and native-resolution key frames",
+    "frames": "Return original frames for one time range so the main model can look at them directly"
+  }
+}

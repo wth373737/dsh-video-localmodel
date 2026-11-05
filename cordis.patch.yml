@@ -1,0 +1,4 @@
+- insert:
+    - id: video-localmodel
+      name: dsh-video-localmodel
+      config: {}
