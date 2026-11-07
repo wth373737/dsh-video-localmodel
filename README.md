@@ -16,7 +16,7 @@ L3 local text     qwen2.5:7b, window summaries -> chapters     ~10 s per window
 L4 hand-off       SRT + timeline + native-resolution frames    leading model reads pixels
 ```
 
-Every stage caches under `<workspace>/.video/<file-key>/`, so a rerun resumes.
+Every stage writes under `<workspace>/.video/<file-key>/`, so a rerun resumes. ASR is reused while the plan is unchanged; pass `force: true` to `video_local_scan` to re-run it.
 
 ## Tools
 

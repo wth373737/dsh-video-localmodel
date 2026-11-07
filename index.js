@@ -221,6 +221,7 @@ function scanTool(ctx, config) {
         plan_id: { type: 'string', description: 'The planId returned by video_local_plan. A mismatch means models or parameters changed.' },
         confirm_models: PARAM_CONFIRM,
         language: { type: 'string', description: 'Override the ASR language for this run.' },
+        force: { type: 'boolean', description: 'Re-run ASR even when a transcript from the same plan is already cached.' },
       },
       required: ['input', 'confirm_models'],
       additionalProperties: false,
@@ -241,7 +242,7 @@ function scanTool(ctx, config) {
         const lines = []
         const stats = value.stats
         lines.push(
-          `扫描完成：时长 ${formatHms(stats.duration)} · 转写 ${stats.chunks} 块（${stats.characters} 字，用时 ${humanDuration(stats.asrSeconds)}）· 场景切点 ${stats.scenes} · 粗筛帧 ${stats.frames} · 总用时 ${humanDuration(stats.elapsedSeconds)}`,
+          `扫描完成：时长 ${formatHms(stats.duration)} · 转写 ${stats.chunks} 块（${stats.characters} 字，用时 ${humanDuration(stats.asrSeconds)}${stats.asrCached ? '，复用缓存' : ''}）· 场景切点 ${stats.scenes} · 粗筛帧 ${stats.frames} · 总用时 ${humanDuration(stats.elapsedSeconds)}`,
         )
         if (value.transcript_preview.length > 0) {
           lines.push('')

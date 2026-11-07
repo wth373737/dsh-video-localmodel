@@ -1,6 +1,6 @@
 {
   "name": "dsh-video-localmodel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "Local-first video screening for DeepSeek Harness: deterministic media signals, local Qwen3-ASR subtitles, local VLM frame captions and a text-model timeline, with the raw candidate frames handed back to the cloud model.",
